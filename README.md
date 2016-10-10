@@ -9,7 +9,9 @@ npm install modelo-log
 ## Features
 
 1. Save daily logs to `${process.cwd()}/logs/hostIp-date.txt`
+
     > sample filename: `10.10.11.11-2016-10-08.txt`
+
 1. print to console
 
 ## Example
