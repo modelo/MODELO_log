@@ -17,11 +17,18 @@ npm install modelo-log
 ```js
 var logger = require('modelo-log');
 
-logger.info('hello','tim')
-// print on console: info: hello tim
-// saved in file: 2016-10-10T04:35:34.070Z - info: hello tim
+logger.info('hello', 'KEY');
+// 04:35:34 - info: hello KEY
 
-// other two frequently used api
 logger.warn('notice, here is a warning');
+// 04:35:34 - warn: notice, here is a warning
+
 logger.error('an error! shit');
+// 04:35:34 - error: an error! shit
+
+logger.profile('testTime');
+setTimeout(function() {
+  logger.profile('testTime');
+}, 10);
+// 13:37:11 - info: testTime durationMs=11 
 ```

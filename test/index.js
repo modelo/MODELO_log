@@ -1,5 +1,10 @@
-var log = require('../index');
+var logger = require('../index');
 
-log.info('hi,lo');
-log.warn('hey');
-log.error('ba');
+logger.info('hi,lo');
+logger.warn('hey');
+logger.error('ba');
+
+logger.profile('testTime');
+setTimeout(function() {
+  logger.profile('testTime');
+}, 10);
