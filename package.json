@@ -1,0 +1,26 @@
+{
+  "name": "modelo-log",
+  "version": "0.0.1",
+  "description": "log module for modelo servers",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/getIP.js & node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modelo/MODELO_log.git"
+  },
+  "keywords": [
+    "log"
+  ],
+  "author": "timqian",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/modelo/MODELO_log/issues"
+  },
+  "homepage": "https://github.com/modelo/MODELO_log#readme",
+  "dependencies": {
+    "winston": "^2.2.0",
+    "winston-daily-rotate-file": "^1.3.1"
+  }
+}
