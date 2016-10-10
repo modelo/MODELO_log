@@ -25,8 +25,10 @@ var logger = new (winston.Logger)({
     })
   ]
 });
+
 function timestamp () {
   var now = new Date()
   return now.getHours() + ':' + now.getMinutes() + ':' + now.getSeconds();
 }
+
 module.exports = logger;
