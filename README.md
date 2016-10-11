@@ -12,12 +12,18 @@ npm install modelo-log
 
     > sample filename: `10.10.11.11-2016-10-08.txt`
 
-1. print to console
+1. customize output ways
+
 
 ## Example
 
 ```js
 var logger = require('modelo-log');
+logger.setOutput({
+  // default options
+  console: true,
+  file: true
+})
 
 logger.info('hello', 'KEY');
 // 04:35:34 - info: hello KEY
