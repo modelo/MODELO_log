@@ -15,7 +15,7 @@ npm install modelo-log
 1. customize output ways
 
 
-## Example
+## Sample usage
 
 ```js
 var logger = require('modelo-log');
@@ -25,18 +25,21 @@ logger.setOutput({
   file: true
 })
 
-logger.info('hello', 'KEY');
-// 04:35:34 - info: hello KEY
+logger.info('TAG', 'this is a message');
+// 07:31:26 info: [TAG  ] this is a message
 
-logger.warn('notice, here is a warning');
-// 04:35:34 - warn: notice, here is a warning
+logger.warn('TAGE2', 'notice, here is a warning');
+// 07:31:26 warn: [TAGE2] notice, here is a warning
 
-logger.error('an error! shit');
-// 04:35:34 - error: an error! shit
+logger.error('HTTP', 'an error! shit');
+// 07:31:26 error:[HTTP ] an error! shit
 
 logger.profile('testTime');
 setTimeout(function() {
   logger.profile('testTime');
 }, 10);
-// 13:37:11 - info: testTime durationMs=11 
+// 07:28:38 info: [testT] testTime {"durationMs":13}
 ```
+
+### Note
+The first argument represent TAG of the log
