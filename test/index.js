@@ -1,10 +1,11 @@
-var logger = require('../src/index');
+var logger = require('../index');
 
 logger.info('TAG', 'this is a message');
 
 logger.warn('TAGE2', 'notice, here is a warning');
 
 logger.error('HTTP', 'an error! shit');
+
 
 logger.profile('testTime');
 setTimeout(function() {

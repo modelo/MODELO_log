@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "modelo-log": "0.0.5"
+    "modelo-log": "0.0.4"
   }
 }

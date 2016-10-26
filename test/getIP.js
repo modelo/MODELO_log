@@ -1,10 +1,6 @@
-var getIP = require('../src/getIP');
-var should = require('should')
+var getIP = require('../getIP');
+var assert = require('assert');
 
-describe('getIP.js', function () {
-  
-  it('should get IP', function () {
-    getIP().length.should.above(4)
-  });
-  
-});
+var ip = getIP()
+
+assert(ip.length > 0, 'should get ip');
