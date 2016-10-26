@@ -1,4 +1,4 @@
-modelo-log is a quick wrap of [winston](https://github.com/winstonjs/winston) for our use in modelo
+> modelo-log is a quick wrap of [winston](https://github.com/winstonjs/winston) for our use in modelo
 
 ## Install
 
@@ -10,10 +10,19 @@ npm install modelo-log
 
 1. Save daily logs to `${process.cwd()}/logs/hostIp-date.txt`
 
-    > sample filename: `10.10.11.11-2016-10-08.txt`
+  > sample filename: `10.10.11.11-2016-10-08.txt`
 
 1. customize output ways
 
+## util functions
+
+- `filterSensitive`
+
+  ```js
+  var logger = require('modelo-log');
+  logger.filterSensitive({username: abc, password: abcdefg, credit: '4564188001337578'})
+  // return {username: abc, password: ******}
+  ```
 
 ## Sample usage
 
@@ -26,19 +35,19 @@ logger.setOutput({
 })
 
 logger.info('TAG', 'this is a message');
-// 07:31:26 info: [TAG  ] this is a message
+// 09:42:49.848 info: [TAG  ] this is a message
 
 logger.warn('TAGE2', 'notice, here is a warning');
-// 07:31:26 warn: [TAGE2] notice, here is a warning
+// 09:42:49.848 warn: [TAGE2] notice, here is a warning
 
 logger.error('HTTP', 'an error! shit');
-// 07:31:26 error:[HTTP ] an error! shit
+// 09:42:49.848 error:[HTTP ] an error! shit
 
 logger.profile('testTime');
 setTimeout(function() {
   logger.profile('testTime');
 }, 10);
-// 07:28:38 info: [testT] testTime {"durationMs":13}
+// 09:42:49.848 info: [testT] testTime {"durationMs":13}
 ```
 
 ### Note

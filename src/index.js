@@ -3,6 +3,7 @@ require('winston-daily-rotate-file');
 var getIP = require('./getIP');
 var path = require('path');
 var fs = require('fs');
+var filterSensitive = require('./filterSensitive')
 
 var logPath = path.join(process.cwd(), '/logs');
 
@@ -14,7 +15,7 @@ if (!fs.existsSync(logPath)) {
 var ip = getIP();
 
 var timestamp = function() {
-    return new Date().toISOString().slice(11, 19)
+    return new Date().toISOString().slice(11, 23)
 }
 
 var formatter = function(options) {
@@ -53,11 +54,13 @@ logger.setOutput = function(options) {
     })
 
     if (options.console === false) {
-        logger.remove(winston.transports.Console)
+        this.remove(winston.transports.Console)
     }
     if (options.file === false) {
-        logger.remove(winston.transports.DailyRotateFile)
+        this.remove(winston.transports.DailyRotateFile)
     }
 }
+
+logger.filterSensitive = filterSensitive;
 
 module.exports = logger;
