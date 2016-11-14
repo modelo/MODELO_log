@@ -6,9 +6,9 @@ logger.warn('[TAGE2]', 'notice, here is a warning');
 
 logger.error('[HTTP]', 'an error! shit', {a: 3});
 
-logger.profile('testTime');
+logger.profile('[testTime]');
 setTimeout(function() {
-    logger.profile('testTime');
+    logger.profile('[testTime]');
 }, 10);
 
 logger.setOutput({

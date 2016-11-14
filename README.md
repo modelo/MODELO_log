@@ -34,20 +34,20 @@ logger.setOutput({
   file: true
 })
 
-logger.info('TAG', 'this is a message');
-// 09:42:49.848 info: [TAG  ] this is a message
+logger.info('[TAG]', 'this is a message');
+// 2016-11-14T12:47:32.204Z info: [TAG] this is a message
 
-logger.warn('TAGE2', 'notice, here is a warning');
-// 09:42:49.848 warn: [TAGE2] notice, here is a warning
+logger.warn('[TAGE2]', 'notice, here is a warning');
+// 2016-11-14T12:47:32.204Z warn: [TAGE2] notice, here is a warning
 
-logger.error('HTTP', 'an error! shit');
-// 09:42:49.848 error:[HTTP ] an error! shit
+logger.error('[HTTP]', 'an error! shit');
+// 2016-11-14T12:47:32.204Z error:[HTTP] an error! shit
 
 logger.profile('testTime');
 setTimeout(function() {
-  logger.profile('testTime');
+  logger.profile('[testTime]');
 }, 10);
-// 09:42:49.848 info: [testT] testTime {"durationMs":13}
+// 2016-11-14T12:47:32.204Z info: [testTime] testTime {"durationMs":13}
 ```
 
 ### Note
