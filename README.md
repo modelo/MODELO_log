@@ -21,7 +21,7 @@ npm install modelo-log
   ```js
   var logger = require('modelo-log');
   logger.filterSensitive({username: abc, password: abcdefg, credit: '4564188001337578'})
-  // return {username: abc, password: ******}
+  // return {username: abc, password: ******, credit: '************7578'}
   ```
 
 ## Sample usage

@@ -1,6 +1,6 @@
 {
   "name": "modelo-log",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "log module for modelo servers",
   "main": "src/index.js",
   "scripts": {
