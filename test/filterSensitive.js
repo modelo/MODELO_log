@@ -4,7 +4,8 @@ var filterSensitive = require('../src/filterSensitive');
 var logObj = {
   username: 'Tim',
   password: 'lilllla',
-  credit: '4564188001337578'
+  credit: '4564188001337578',
+  abc: 123,
 }
 
 describe('filterSensitive.js', function () {

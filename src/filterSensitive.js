@@ -17,9 +17,10 @@ function filterSensitive(logObj) {
         }
 
         // filter out credit card number
-        if (validCreditCard(newLogObj[key])) {
+        if (typeof newLogObj[key] === 'string' && validCreditCard(newLogObj[key])) {
             newLogObj[key] = newLogObj[key].replace(/\d(?=\d{4})/g, "*")
         }
+
     });
     return newLogObj
 }
